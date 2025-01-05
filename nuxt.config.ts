@@ -7,5 +7,6 @@ export default defineNuxtConfig({
     ignores: [
       '\\.priv.md$'
     ]
-  }
+  },
+  ssr: true
 })
