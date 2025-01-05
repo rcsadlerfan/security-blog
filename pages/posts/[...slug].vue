@@ -7,7 +7,26 @@ useHead({
 </script>
 
 <template>
-    <main class="p-5 prose prose prose-invert max-w-none">
-        <ContentDoc></ContentDoc>
-    </main>
+    <div class="flex items-stretch space-x-5 divide divide-x divide-gray-500">
+        <main class="
+            grow
+            p-5 
+            prose 
+            prose-invert 
+            max-w-none
+            prose-img:m-auto
+            prose-img:block
+            prose-img:w-96
+            prose-img:my-16"
+        >
+            <ContentDoc></ContentDoc>
+        </main>
+        <div class="px-5 w-80 shrink-0 space-y-5">
+            <PostMetadataItem label="Tags">
+                <div class="space-x-3">
+                    <UBadge v-for="t in page.tags" :key="t">{{ t }}</UBadge>
+                </div>
+            </PostMetadataItem>
+        </div>
+    </div>
 </template>
